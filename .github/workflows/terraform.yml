@@ -48,7 +48,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - terraform_iac/serverless-dynamodb/**
+      - .
   pull_request:
 
 permissions:
