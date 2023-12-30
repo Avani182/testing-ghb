@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = "tf-remote-backend-bucket-esrcgs9er7f"
+  bucket = "tf-remote-backend-bucket-esrcgs9er7"
   versioning {
     enabled = var.s3_object_versioning_enabled
   }
