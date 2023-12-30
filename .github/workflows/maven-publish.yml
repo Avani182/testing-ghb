@@ -31,14 +31,14 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ vars.AWS_REGION }}
+        aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Build with Maven
       env:
         AWS_AK_VAL: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SK_VAL: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_ACC_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        AWS_REG: ${{ vars.AWS_REGION }}
+        AWS_REG: ${{ secrets.AWS_REGION }}
       working-directory: ./aws_cloud/lambda-dynamodb-func-java-sdk
       # run: mvn -B package --file pom.xml
       run: |
