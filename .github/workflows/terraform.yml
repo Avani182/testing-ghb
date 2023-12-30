@@ -93,7 +93,7 @@ jobs:
         pwd
         ls -la
         aws configure list
-        aws s3 cp s3://serverless-dynamodb-app-build/demo-1.0.0.jar .
+        aws s3 cp s3://my-bucket-ghb/demo-1.0.0.jar .
         ls -la
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
