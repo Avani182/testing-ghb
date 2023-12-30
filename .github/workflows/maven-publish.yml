@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - aws_cloud/lambda-dynamodb-func-java-sdk/**
+      - .
 jobs:
   build:
 
