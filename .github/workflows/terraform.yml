@@ -85,7 +85,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ vars.AWS_REGION }}
+        aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Download the App build.
       working-directory: ./terraform_iac/serverless-dynamodb
@@ -122,7 +122,7 @@ jobs:
         AWS_AK: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SK: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_ACC_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        AWS_REG: ${{ vars.AWS_REGION }}
+        AWS_REG: ${{ secrets.AWS_REGION }}
       working-directory: ./terraform_iac/serverless-dynamodb
       run: terraform plan -var=aws_ak=$AWS_AK -var=aws_sk=$AWS_SK -var=aws_region=$AWS_REG -var=aws_account_id=$AWS_ACC_ID
 
@@ -133,7 +133,7 @@ jobs:
         AWS_AK: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SK: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_ACC_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        AWS_REG: ${{ vars.AWS_REGION }}
+        AWS_REG: ${{ secrets.AWS_REGION }}
       working-directory: ./terraform_iac/serverless-dynamodb
       run: |
         terraform apply -var=aws_ak=$AWS_AK -var=aws_sk=$AWS_SK -var=aws_region=$AWS_REG -var=aws_account_id=$AWS_ACC_ID -auto-approve
