@@ -3,7 +3,7 @@ resource "aws_lambda_function" "test_lambda" {
   # path.module in the filename.
   filename      = "demo-1.0.0.jar"
   function_name = "lambda_function_java_tf"
-  role          = "arn:aws:iam::615311846444:role/service-role/test-java-lambda-role"
+  role          = "arn:aws:iam::945569380749:role/test"
   handler       = "com.amazonaws.lambda.demo.LambdaFunctionHandler::handleRequest"
   timeout       = var.lambda_function_timeout
   memory_size   = var.lambda_function_memory
