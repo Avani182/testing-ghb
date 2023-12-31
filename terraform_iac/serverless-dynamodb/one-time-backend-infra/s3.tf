@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = "terraform-state-backend-4958t45wc0"
+  bucket = "terraform-state-backend-4958t45wc"
   versioning {
     enabled = true
   }
